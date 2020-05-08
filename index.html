@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" media="screen and (max-width: 740px)" href="css/mobile.css">
+  <title>Tic-Tac-Toe</title>
+</head>
+
+<body>
+
+  <!-- Navbar Link and Sound Button -->
+  <header>
+    <nav id="navbar">
+
+      <a href="https://github.com/tpsst5/tic_tac_toe" target="_blank" class="nav link"><img src="/img/github.png"
+          alt="GitHub link"></a>
+
+      <button class="nav btn">
+        <div id="sound">
+          <i class="fas fa-volume-down" id="mute-btn"></i>
+        </div>
+        <div id="mute" class="hide-sound">
+          <i class="fas fa-volume-mute" id="unmute-btn"></i>
+        </div>
+      </button>
+
+    </nav>
+  </header>
+
+  <!-- Popup box -->
+  <section id="popup-container">
+    <div class="popup">
+      <span class="helper"></span>
+      <div>
+        <div id="popup-close">&times;</div>
+        <p id="popup-text">Player One Wins!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gameboard -->
+  <section class="container">
+    <div id="gameboard">
+      <div class="square" id="square-0"></div>
+      <div class="square" id="square-1"></div>
+      <div class="square" id="square-2"></div>
+      <div class="square" id="square-3"></div>
+      <div class="square" id="square-4"></div>
+      <div class="square" id="square-5"></div>
+      <div class="square" id="square-6"></div>
+      <div class="square" id="square-7"></div>
+      <div class="square" id="square-8"></div>
+    </div>
+  </section>
+
+  <!-- Player and Score Information -->
+  <section class="player-container">
+    <div id="player-one" class="score-labels">
+      PLAYER (X)<br>0
+    </div>
+    <div id="tie" class="score-labels">
+      TIE<br>0
+    </div>
+    <div id="player-two" class="score-labels">
+      COMPUTER (O)<br>0
+    </div>
+    <div class="player-icon-container">
+      <div id="num-of-players">
+        <i class="fas fa-user btn show" id="one-player"></i>
+        <i class="fas fa-user-friends btn hidden" id="two-player"></i>
+      </div>
+      <p id="player-label">1P</p>
+    </div>
+  </section>
+
+  <section class='audio'>
+    <audio src="/sounds/onload.mp3" autoplay="true" id="refresh-audio"></audio>
+    <audio src="/sounds/player-change.mp3" id="player-select-audio"></audio>
+    <audio src="/sounds/player1.mp3" id="set-piece-sound"></audio>
+    <audio src="/sounds/end-round.mp3" id="end-round-sound"></audio>
+  </section>
+
+  <footer id="footer">
+    <div id="footer-container">
+      <div id="reset">
+        <button id="reset-btn" class="btn">RESET</button>
+      </div>
+      <div id="sound-credit">
+        <a href="https://www.zapsplat.com/" target="_blank">Sound from Zapsplat.com</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://kit.fontawesome.com/b61ef1ecc4.js" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+html {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-family: 'Quicksand', sans-serif;
+  background: #444;
+}
+
+body {
+  height: 100vh;
+}
+
+/* Navbar - GitHub link and sound buttons */
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav {
+  margin: 0 1rem;
+  padding: .5rem;
+}
+
+.btn {
+  background-color: transparent;
+  cursor: pointer;
+  font-size: 2rem;
+  border: none;
+  outline: none;
+  text-decoration: none;
+  transition: color 0.5s ease-in-out;
+}
+
+.btn:hover {
+  color: #bbbbbb;
+}
+
+#sound,
+#mute {
+  width: 1rem;
+  height: 1rem;
+  position: absolute;
+  top: 0.7rem;
+  right: 2rem;
+}
+
+.hide-sound {
+  visibility: hidden;
+}
+
+/* Popup Box */
+#popup-container {
+  background: rgba(0, 0, 0, .4);
+  display: none;
+  height: 100%;
+  position: fixed;
+  text-align: center;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.popup {
+  cursor: pointer;
+  display: block;
+  height: 40%;
+  opacity: 0.9;
+  font-size: 2.2rem;
+}
+
+.popup .helper {
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.popup>div {
+  background-color: #fff;
+  display: inline-block;
+  height: auto;
+  max-width: 20rem;
+  min-height: 7.5rem;
+  vertical-align: middle;
+  width: 60%;
+  position: relative;
+  border-radius: 8px;
+  padding: 1rem 5%;
+}
+
+#popup-close {
+  background-color: #fff;
+  border: 3px solid #999;
+  border-radius: 50%;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: bold;
+  position: absolute;
+  top: -1rem;
+  right: -1rem;
+  font-size: 1.7rem;
+  line-height: 1.5rem;
+  width: 2rem;
+  height: 2rem;
+  text-align: center;
+}
+
+#popup-close:hover {
+  background-color: #ccc;
+}
+
+/* Gameboard display */
+
+.container {
+  margin: auto;
+  margin-top: 0.5rem;
+  width: 525px;
+}
+
+#gameboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 160px;
+  color: #fff;
+  font-size: 180px;
+  animation: animateBoard 1s forwards ease-in-out;
+}
+
+@keyframes animateBoard {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.container .square {
+  border: #fff 2.5px solid;
+  width: 170px;
+  height: 170px;
+}
+
+.container #square-0 {
+  border-left: none;
+  border-top: none;
+  margin-left: 2.5px;
+  margin-top: 2.5px;
+}
+
+.container #square-1 {
+  border-top: none;
+  margin-top: 2.5px;
+}
+
+.container #square-2 {
+  border-right: none;
+  margin-right: 2.5px;
+  border-top: none;
+  margin-top: 2.5px;
+}
+
+.container #square-3 {
+  border-left: none;
+  margin-left: 2.5px;
+}
+
+.container #square-5 {
+  border-right: none;
+  margin-right: 2.5px;
+}
+
+.container #square-6 {
+  border-left: none;
+  margin-left: 2.5px;
+  border-bottom: none;
+  margin-bottom: 2.5px;
+}
+
+.container #square-7 {
+  border-bottom: none;
+  margin-bottom: 2.5px;
+}
+
+.container #square-8 {
+  border-right: none;
+  margin-right: 2.5px;
+  border-bottom: none;
+  margin-bottom: 2.5px;
+}
+
+.square:hover {
+  cursor: pointer;
+}
+
+
+/* Game-Info */
+
+.player-container {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+#player-one,
+#tie,
+#player-two {
+  text-align: center;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 0 1rem;
+}
+
+.player-icon-container {
+  background: transparent;
+  outline: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#num-of-players {
+  display: grid;
+}
+
+#one-player {
+  grid-column: 1;
+  grid-row: 1;
+  padding-left: 5px;
+}
+
+#two-player {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+#player-label {
+  text-align: center;
+  font-size: 1.5rem;
+  margin: -1px;
+}
+
+.show {
+  visibility: visible;
+  float: left;
+}
+
+.hidden {
+  visibility: hidden;
+  float: right;
+}
+
+#footer {
+  position: fixed;
+  bottom: 0%;
+}
+
+#footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+#reset {
+  display: flex;
+  bottom: 0;
+}
+
+#reset-btn {
+  margin-top: 3rem;
+}
+
+#sound-credit {
+  margin-top: 3rem;
+  margin-right: 1rem;
+}
+
+#sound-credit a {
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: color 0.5s ease-in-out;
+}
+
+#sound-credit a:hover {
+  color: #bbbbbb;
+}

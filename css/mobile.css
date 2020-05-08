@@ -1,0 +1,99 @@
+/* Navbar */
+
+#navbar {
+  margin-top: 20px;
+}
+
+#sound,
+#mute {
+  top: 1.4rem;
+}
+
+/* Gameboard */
+.container {
+  margin: auto;
+  margin-top: 4.5rem;
+  margin-bottom: -2.5rem;
+  width: 350px;
+}
+
+#gameboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  text-align: center;
+  line-height: 106px;
+  color: #fff;
+  font-size: 120px;
+}
+
+.container .square {
+  border: #fff 2.5px solid;
+  width: 111.6px;
+  height: 111.6px;
+}
+
+/* Game Info */
+
+.player-container {
+  width: 100vw;
+  margin-top: 4rem;
+  margin-left: -22px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#player-one,
+#tie,
+#player-two {
+  font-weight: 700;
+  font-size: 1.6rem;
+  flex-grow: 2;
+  margin: 0;
+}
+
+#player-one,
+#player-two {
+  flex: 2;
+}
+
+#tie {
+  flex: 1;
+}
+
+.player-icon-container {
+  position: absolute;
+  bottom: 50px;
+  left: 15px;
+}
+
+@media screen and (max-width: 465px) {
+
+  /* Navbar */
+  #sound,
+  #mute {
+    margin-top: -24px;
+  }
+
+  /* Gameboard */
+  .container {
+    margin-top: 0;
+  }
+
+  /* Game Info */
+  .player-container {
+    flex-direction: column;
+    margin-left: 0;
+    margin-top: 2.5rem;
+
+  }
+
+  #player-one,
+  #tie,
+  #player-two {
+    font-size: 1.4rem;
+    margin-top: 0.7rem;
+
+  }
+}
