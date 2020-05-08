@@ -1,4 +1,4 @@
-# My Library
+# Tic-Tac-Toe
 
 ## General Information:
 This project was complete following The Odin Project's [curriculum](https://www.theodinproject.com/courses/javascript/lessons/tic-tac-toe-javascript?ref=lnav).
@@ -11,6 +11,6 @@ This project was complete following The Odin Project's [curriculum](https://www.
 - Vanilla Javascript
 
 ## Setup: 
-The live version of the webpage can be seen [here](https://tpsst5.github.io/tic_tac_toe/).
+The live version of the webpage can be seen [here](https://tpsst5.github.io/tic-tac-toe/).
 ## Status:
-This project is complete. The JS file is unfinished, but I don't think I'll spend more time on this project.
+This project is complete.
